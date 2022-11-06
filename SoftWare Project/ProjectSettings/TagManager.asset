@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Wepon
+    uniqueID: 2422117237
+    locked: 0
