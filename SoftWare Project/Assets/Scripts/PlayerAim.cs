@@ -1,13 +1,25 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
 
 public class PlayerAim : MonoBehaviour
 {
+    //Events
+    public event EventHandler <OnShootEventArgs> OnShoot;
+    public class OnShootEventArgs : EventArgs {
+        public Vector3 gunEndPointPosition;
+        public Vector3 ShotPosition;
+
+
+
+    }
     // Start is called before the first frame update
     private Transform aimTransform;
+    [SerializeField] private Transform GunEndPointTransform;
     private Animator aimAnim;
+
 
     private void Awake()
     {
@@ -33,11 +45,21 @@ public class PlayerAim : MonoBehaviour
         
 
     }
+    //shoting Animation
     private void ShootingHandler()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            aimAnim.SetTrigger("Shoot");   
+            Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
+            aimAnim.SetTrigger("Shoot");
+            OnShoot?.Invoke(this, new OnShootEventArgs
+            {
+                gunEndPointPosition = GunEndPointTransform.position,
+                ShotPosition = mousePosition
+            }) ;
+
+
+
 
         }
     }
