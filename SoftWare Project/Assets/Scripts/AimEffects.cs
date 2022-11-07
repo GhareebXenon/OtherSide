@@ -13,6 +13,8 @@ public class AimEffects : MonoBehaviour
     }
     private void playerAim_OnShoot(object sender, PlayerAim.OnShootEventArgs e)
     {
+        UtilsClass.ShakeCamera(1f,  .2f);
+        
 
     }
 

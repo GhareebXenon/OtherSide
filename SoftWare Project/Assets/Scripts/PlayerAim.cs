@@ -50,15 +50,13 @@ public class PlayerAim : MonoBehaviour
         {
             aimlocalScale.y = -1f;
 
-        }else
+        }
+        else
         {
             aimlocalScale.y = +1f;
 
         }
         aimTransform.localScale = aimlocalScale; 
-            
-        
-
     }
     //shoting Animation
     private void ShootingHandler()
