@@ -5,7 +5,7 @@ using UnityEngine;
 public class InfiniteWorld : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
-    Vector2Int currentTilePosition = new Vector2Int(0,0);
+    Vector2Int currentTilePosition = new Vector2Int(0, 0);
     [SerializeField] Vector2Int playerTilePosition;
     Vector2Int onTileGridPlayerPos;
     [SerializeField] float tileSize = 20f;
@@ -14,16 +14,25 @@ public class InfiniteWorld : MonoBehaviour
     [SerializeField] int terrainTileVerticalCount;
     [SerializeField] int fieldOfVisionHeight = 3;
     [SerializeField] int fieldOfVisionWidth = 3;
-    private void Awake() {
-        terrainTiles = new GameObject[terrainTileHorizontalCount,terrainTileVerticalCount];
+    private void Awake()
+    {
+        terrainTiles = new GameObject[terrainTileHorizontalCount, terrainTileVerticalCount];
 
     }
 
-    private void Update() {
+    private void Start() {
+        UpdateTileOnScreen();
+    }
+
+    private void Update()
+    {
         playerTilePosition.x = (int)(playerTransform.position.x / tileSize);
         playerTilePosition.y = (int)(playerTransform.position.y / tileSize);
 
-        if(currentTilePosition != playerTilePosition)
+        playerTilePosition.x -= playerTransform.position.x < 0 ? 1 : 0;
+        playerTilePosition.x -= playerTransform.position.y < 0 ? 1 : 0;
+
+        if (currentTilePosition != playerTilePosition)
         {
             currentTilePosition = playerTilePosition;
 
@@ -33,9 +42,12 @@ public class InfiniteWorld : MonoBehaviour
         }
     }
 
-    private void UpdateTileOnScreen() {
-        for (int vision_x = -(fieldOfVisionWidth/2); vision_x <= fieldOfVisionWidth; vision_x++) {
-            for (int vision_y = -(fieldOfVisionHeight/2); vision_y <= fieldOfVisionHeight; vision_y++) {
+    private void UpdateTileOnScreen()
+    {
+        for (int vision_x = -(fieldOfVisionWidth / 2); vision_x <= fieldOfVisionWidth/2; vision_x++)
+        {
+            for (int vision_y = -(fieldOfVisionHeight / 2); vision_y <= fieldOfVisionHeight/2; vision_y++)
+            {
                 int tileToUpdate_x = CalcTileGridPlayerPos(playerTilePosition.x + vision_x, true);
                 int tileToUpdate_y = CalcTileGridPlayerPos(playerTilePosition.y + vision_y, false);
 
@@ -45,50 +57,42 @@ public class InfiniteWorld : MonoBehaviour
         }
     }
 
-    private Vector3 CalcTilePos(int x , int y) {
+    private Vector3 CalcTilePos(int x, int y)
+    {
         return new Vector3(x * tileSize, y * tileSize, 0f);
     }
-    private int CalcTileGridPlayerPos(float currentValue, bool horizontal) {
+    private int CalcTileGridPlayerPos(float currentValue, bool horizontal)
+    {
 
-        if(horizontal)
+        if (horizontal)
         {
-            if(currentValue >= 0)
+            if (currentValue >= 0)
             {
                 currentValue = currentValue % terrainTileHorizontalCount;
             }
-            else {
+            else
+            {
+                currentValue += 1;
                 currentValue = terrainTileHorizontalCount - 1 + currentValue % terrainTileHorizontalCount;
             }
         }
-        else {
-            if(currentValue >= 0)
+        else
+        {
+            if (currentValue >= 0)
             {
                 currentValue = currentValue % terrainTileVerticalCount;
             }
-            else {
+            else
+            {
+                currentValue += 1;
                 currentValue = terrainTileVerticalCount - 1 + currentValue % terrainTileVerticalCount;
             }
-        }
-        
-        if(onTileGridPlayerPos.x >= 0)
-        {
-            onTileGridPlayerPos.x = playerTilePosition.x % terrainTileHorizontalCount;
-        }
-        else {
-            onTileGridPlayerPos.x = terrainTileHorizontalCount - 1 + playerTilePosition.x % terrainTileHorizontalCount;
-        }
-        if (onTileGridPlayerPos.y >= 0)
-        {
-        onTileGridPlayerPos.y = playerTilePosition.y % terrainTileVerticalCount;
-        }
-        else {
-        onTileGridPlayerPos.y = terrainTileVerticalCount - 1 + playerTilePosition.y % terrainTileVerticalCount;
         }
 
         return (int)currentValue;
     }
 
-        public void Add(GameObject tileGameObject, Vector2Int tilePosition)
+    public void Add(GameObject tileGameObject, Vector2Int tilePosition)
     {
         terrainTiles[tilePosition.x, tilePosition.y] = tileGameObject;
     }
