@@ -1387,6 +1387,10 @@ PrefabInstance:
       value: EnemyBat
       objectReference: {fileID: 0}
     - target: {fileID: 2360783853078364665, guid: 5364f52194dbfc449976b8af97274ad2, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360783853078364665, guid: 5364f52194dbfc449976b8af97274ad2, type: 3}
       propertyPath: targetDestination
       value: 
       objectReference: {fileID: 324799172}

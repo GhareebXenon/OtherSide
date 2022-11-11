@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2360783853078364664}
   - component: {fileID: 2360783853078364665}
   m_Layer: 0
-  m_Name: EnemyBat
+  m_Name: EnemySkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1477869887, guid: a0fd200cfc002694f8093c89ee37c4be, type: 3}
+  m_Sprite: {fileID: -2003639741, guid: d5b60ef41ee9af64f81e33e1c9ab9560, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.009347439, y: 0.024303257}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.3}
+  m_Size: {x: 0.3486066, y: 0.90197384}
   m_EdgeRadius: 0
 --- !u!50 &2360783853078364664
 Rigidbody2D:
