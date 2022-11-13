@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     //Player 
 
-    private float walkSpeed = 8f;
+    [SerializeField]private float walkSpeed = 7f;
     
     float inputHorizontal;
     float inputVertical;
