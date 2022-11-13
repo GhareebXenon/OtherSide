@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int damage = 5;
+    public Character healthBar;
     [SerializeField] Transform targetDestination;
     GameObject targetGameobject;
     [SerializeField] float speed;
@@ -30,9 +33,16 @@ public class Enemy : MonoBehaviour
             Attack();
         }
     }
-
     private void Attack()
     {
        // Debug.Log("Attacking the Player!!");
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if( collision.gameObject.tag == "Player")
+        {
+            healthBar.TakeDamge(damage);
+        }
+    }
+   
 }
