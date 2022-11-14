@@ -7,7 +7,7 @@ public class TerrainTile : MonoBehaviour
     [SerializeField] Vector2Int tilePosition;
     void Start()
     {
-        GetComponentInParent<InfiniteWorld>().Add(gameObject, tilePosition);
+        GetComponentInParent<WorldScrolling>().Add(gameObject, tilePosition);
 
         transform.position = new Vector3(-100, -100, 0);
     }

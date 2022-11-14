@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InfiniteWorld : MonoBehaviour
+public class WorldScrolling : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
     Vector2Int currentTilePosition = new Vector2Int(0, 0);
