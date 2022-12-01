@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 {
     public int damage = 5;
     public Character healthBar;
-    [SerializeField] Transform targetDestination;
+    Transform targetDestination;
     GameObject targetGameobject;
     [SerializeField] float speed;
 
@@ -17,7 +17,13 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rgdbd2d = GetComponent<Rigidbody2D>();
-        targetGameobject = targetDestination.gameObject;
+        
+    }
+
+    public void SetTarget(GameObject target)
+    {
+        targetGameobject = target;
+        targetDestination = target.transform;
     }
 
     private void FixedUpdate()

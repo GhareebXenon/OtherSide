@@ -169,5 +169,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   healthBar: {fileID: 0}
-  targetDestination: {fileID: 0}
   speed: 1
