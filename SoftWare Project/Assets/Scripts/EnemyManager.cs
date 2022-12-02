@@ -11,7 +11,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject player;
     float timer;
 
-    private void Update()
+  /*  private void Update()
     {
         timer -= Time.deltaTime;
         if (timer < 0f)
@@ -20,8 +20,8 @@ public class EnemyManager : MonoBehaviour
             timer = spawnTimer;
         }
     }
-
-    private void SpawnEnemy()
+  */
+    public void SpawnEnemy()
     {
         Vector3 position = GenerateRandomPosition();
 
