@@ -13853,7 +13853,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -14441,9 +14441,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137498227670660451, guid: 4e78266abb7760540be14c1c59b57557, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137498227670660451, guid: 4e78266abb7760540be14c1c59b57557, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1872850059
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137498227858882688, guid: 4e78266abb7760540be14c1c59b57557, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137498227858882688, guid: 4e78266abb7760540be14c1c59b57557, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137498227858882688, guid: 4e78266abb7760540be14c1c59b57557, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6137498227858882690, guid: 4e78266abb7760540be14c1c59b57557, type: 3}
       propertyPath: m_IsTrigger
