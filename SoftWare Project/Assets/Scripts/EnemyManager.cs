@@ -10,8 +10,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] float spawnTimer;
     [SerializeField] GameObject player;
     float timer;
-
-  /*  private void Update()
+/*
+    private void Update()
     {
         timer -= Time.deltaTime;
         if (timer < 0f)

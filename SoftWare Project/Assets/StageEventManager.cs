@@ -14,23 +14,45 @@ public class StageEventManager : MonoBehaviour
     private void Awake()
     {
         stageTime = GetComponent<StageTime>();
+        stageData.stageEvents[0].time = 0;
+        stageData.stageEvents[1].time = 10;
+        stageData.stageEvents[2].time = 20;
+        stageData.stageEvents[3].time = 30;
     }
 
     private void Update()
     {
+
         if (eventIndexer >= stageData.stageEvents.Count) { return; }
 
         if (stageTime.time > stageData.stageEvents[eventIndexer].time)
         {
 
             Debug.Log(stageData.stageEvents[eventIndexer].message);
+
             
-           for(int i = 0; i < stageData.stageEvents[eventIndexer].count;i++)
+            for (int i = 0; i < stageData.stageEvents[eventIndexer].count;i++)
             {
                 enemyManager.SpawnEnemy();
             }
-            eventIndexer += 1;
 
+            if (eventIndexer != 0)
+            {
+                stageData.stageEvents[eventIndexer].time += 30;
+            }
+
+
+            eventIndexer += 1;
+            if(eventIndexer == 4)
+            {
+                eventIndexer = 1;
+            }
+         
         }
+        
     }
+
+   
+
 }
+
