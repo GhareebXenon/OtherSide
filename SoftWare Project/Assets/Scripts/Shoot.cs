@@ -15,7 +15,7 @@ public class Shoot : MonoBehaviour
         {
             _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _mousePos.z = 0;
-            Instantiate(_bulletPrefab, _gunLocation.position, _gunLocation.rotation).Shoot(_mousePos) ;
+            Instantiate(_bulletPrefab, _gunLocation.position, _gunLocation.rotation).Shoot(_mousePos);
             _audioSource.PlayOneShot(_audioClip);
         }
     }

@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 5892634847683270401}
+  Enemy: {fileID: 2360783853078364658, guid: 5364f52194dbfc449976b8af97274ad2, type: 3}
   _moveSpeed: 5
 --- !u!50 &5892634847683270401
 Rigidbody2D:

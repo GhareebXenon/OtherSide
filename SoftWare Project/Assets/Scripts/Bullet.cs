@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.tag == "Enemy") {
             //Kill Enemy Here
-            collision.gameObject.GetComponent<Enemy>();
+            //collision.gameObject.GetComponent<Enemy>();
             Destroy(this.gameObject);
         }
     }
