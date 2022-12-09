@@ -12,7 +12,6 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         
-       
             if (Input.GetButtonDown("Fire1"))
             {
                 _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
