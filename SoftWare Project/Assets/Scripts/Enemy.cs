@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 {
     public int damage = 5;
     public Character healthBar;
+    
     Transform targetDestination;
     GameObject targetGameobject;
     [SerializeField] float speed;
@@ -49,6 +50,7 @@ public class Enemy : MonoBehaviour
         {
             healthBar.TakeDamge(damage);
         }
+        
     }
    
 }

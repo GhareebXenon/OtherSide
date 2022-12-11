@@ -13,29 +13,27 @@ public class Character : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+   /* void Update()
     {
          if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Heal(10);
         }
-    }
+   }*/
     public void TakeDamge(int damage)
     {
         currentHealth -= damage;
-
         healthBar.SetHealth(currentHealth);
         if(currentHealth <= 0)     // (player death)
         {
             Destroy(gameObject);
         }
     }
-    public void Heal(int heal)
+    /*public void Heal(int heal)
     {
         currentHealth += heal;
 
         healthBar.SetHealth(currentHealth);
 
-    }
+    }*/
 }
