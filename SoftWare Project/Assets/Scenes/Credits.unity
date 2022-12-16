@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 777852104}
   - component: {fileID: 777852103}
   m_Layer: 5
-  m_Name: 'sayed '
+  m_Name: syed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,9 +726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'sayed
-
-'
+  m_text: El-Syed Ahmed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f82e0f4e6e0f994ca20637356e58807, type: 2}
   m_sharedMaterial: {fileID: 425640569964362643, guid: 3f82e0f4e6e0f994ca20637356e58807, type: 2}
@@ -1125,13 +1123,13 @@ MonoBehaviour:
       - m_Target: {fileID: 925225321}
         m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
         m_MethodName: openScene
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1395049126
