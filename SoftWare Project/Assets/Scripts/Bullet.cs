@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     
     public void Shoot(Vector3 mousePos)
     {
-        _rigidbody2D.velocity = _moveSpeed * (mousePos - transform.position);
+        _rigidbody2D.velocity = _moveSpeed * (mousePos - transform.position).normalized;
         Destroy(this.gameObject, 5f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
