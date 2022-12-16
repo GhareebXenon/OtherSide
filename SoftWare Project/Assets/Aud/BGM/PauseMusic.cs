@@ -21,7 +21,7 @@ public class PauseMusic : MonoBehaviour
     public void PauseMusicOnPauseMenu()
     {
         isPaused = !isPaused;
-        if (isPaused)
+        if (isPaused && GetComponentInChildren<AudioSource>().isPlaying)
         {
             GetComponentInChildren<AudioSource>().Pause();
         }
