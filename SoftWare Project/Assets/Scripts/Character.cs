@@ -29,7 +29,6 @@ public class Character : MonoBehaviour
         if(currentHealth <= 0)     // (player death)
         {
             Destroy(gameObject);
-            OnPlayerDeath?.Invoke();
         }
     }
     /*public void Heal(int heal)
