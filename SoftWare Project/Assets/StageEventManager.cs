@@ -7,7 +7,6 @@ public class StageEventManager : MonoBehaviour
 
     [SerializeField] StageData stageData;
     [SerializeField] EnemyManager enemyManager;
-    [SerializeField] BossManager BossManager;
     StageTime stageTime;
     int eventIndexer;
 
@@ -23,7 +22,6 @@ public class StageEventManager : MonoBehaviour
 
     private void Update()
     {
-
 
         if (eventIndexer >= stageData.stageEvents.Count) { return; }
 

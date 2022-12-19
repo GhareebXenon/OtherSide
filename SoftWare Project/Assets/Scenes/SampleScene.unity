@@ -1031,6 +1031,7 @@ AudioSource:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &472813164
 =======
 --- !u!1 &617477587
@@ -1430,6 +1431,8 @@ Transform:
 >>>>>>> parent of 60b7d9d (GameOverMenu Update)
 =======
 >>>>>>> parent of 60b7d9d (GameOverMenu Update)
+=======
+>>>>>>> parent of bff8e49 (Boss Update??)
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -15054,7 +15057,7 @@ GameObject:
   - component: {fileID: 1652840869}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16384,7 +16387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 9dac89246f41ffd4dbccf8dca3f54fbf, type: 2}
   enemyManager: {fileID: 396626398}
-  BossManager: {fileID: 0}
 --- !u!1 &2117859556
 GameObject:
   m_ObjectHideFlags: 0
@@ -16751,54 +16753,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 264349575, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 298470208, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 299402351, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 346358154, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 744193058, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 1072481556, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398507362, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402911744, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1403124977, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712674554, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 1863012685, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967583461, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
-      propertyPath: m_RootOrder
-      value: 21
-      objectReference: {fileID: 0}
     - target: {fileID: 1133361802598984110, guid: 430a2288e9878f04fb2bd3588d2f0c47, type: 3}
       propertyPath: m_RootOrder
       value: 3
