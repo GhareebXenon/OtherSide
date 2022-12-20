@@ -32,11 +32,13 @@ public class Character : MonoBehaviour
             OnPlayerDeath?.Invoke();
         }
     }
-    /*public void Heal(int heal)
+    public void Heal(int heal)
     {
         currentHealth += heal;
-
         healthBar.SetHealth(currentHealth);
-
-    }*/
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
 }
