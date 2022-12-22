@@ -14,14 +14,14 @@ public class PlayerMovement : MonoBehaviour
     float inputVertical;
 
     //anim
-    public Animator animator;
+    
 
     void Update()
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Speed", Mathf.Abs(inputVertical) );
+       
 
     }
 
