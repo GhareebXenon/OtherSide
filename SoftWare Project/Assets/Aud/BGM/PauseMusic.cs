@@ -6,10 +6,11 @@ public class PauseMusic : MonoBehaviour
 {
 
     private bool isPaused;
-    void Start()
+    private AudioSource combatTheme;
+    private void Awake()
     {
+        combatTheme = GetComponentInChildren<AudioSource>();
     }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -21,11 +22,10 @@ public class PauseMusic : MonoBehaviour
     public void PauseMusicOnPauseMenu()
     {
         isPaused = !isPaused;
-        if (isPaused && GetComponentInChildren<AudioSource>().isPlaying)
-        {
-            GetComponentInChildren<AudioSource>().Pause();
-        }
+        if (isPaused && combatTheme.isPlaying)
+            combatTheme.Pause();
         else
-            GetComponentInChildren<AudioSource>().Play();
+            combatTheme.UnPause();
+
     }
 }
