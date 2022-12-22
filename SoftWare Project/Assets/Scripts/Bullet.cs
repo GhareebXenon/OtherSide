@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] Rigidbody2D _rigidbody2D;
     [SerializeField] float _moveSpeed;
     public EnemyHealth HealthBar;
+
     public int damage = 5;
     
     public void Shoot(Vector3 mousePos)
@@ -16,7 +17,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Boss")
+       if (collision.tag == "Boss")
         {
             //Kill Enemy Here
             
@@ -24,13 +25,14 @@ public class Bullet : MonoBehaviour
             HealthBar.TakeDamage(damage);
            
         }
-        else if(collision.tag == "Enemy")
+        else if(collision.gameObject.tag == "Enemy")
         {
             //Kill Enemy Here
-
+            Destroy(collision.gameObject);
             Destroy(this.gameObject);
-            HealthBar.TakeDamage(damage);
+           // HealthBar.TakeDamage(damage);
         }
+        
     }
    
 }

@@ -101,7 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 5892634847683270401}
   _moveSpeed: 15
-  HealthBar: {fileID: 0}
+  HealthBarS: {fileID: 0}
+  HealthBarB: {fileID: 0}
   damage: 1
 --- !u!50 &5892634847683270401
 Rigidbody2D:
@@ -137,6 +138,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0000002, y: 2.0000005}
+  m_Offset: {x: 0, y: -0.005802512}
+  m_Size: {x: 1.0000002, y: 1.303674}
   m_Direction: 0
