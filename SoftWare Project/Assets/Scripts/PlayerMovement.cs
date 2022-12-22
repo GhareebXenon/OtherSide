@@ -13,13 +13,15 @@ public class PlayerMovement : MonoBehaviour
     float inputHorizontal;
     float inputVertical;
 
-    
-    
+    //anim
+    public Animator animator;
 
     void Update()
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Speed", Mathf.Abs(inputVertical) );
 
     }
 
@@ -27,7 +29,9 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(inputHorizontal, inputVertical).normalized * walkSpeed;
+       
+            
     }
 
-    
+ 
 }

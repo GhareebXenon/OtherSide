@@ -8,7 +8,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] private float moveSpeed = 5;
     private Vector2 moveDir;
-    
+    public Animator animator;
     private void Update()
     {
         ProcessInput();
@@ -16,6 +16,7 @@ public class PlayerControls : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+    
     }
     private void ProcessInput()
     {
@@ -23,7 +24,14 @@ public class PlayerControls : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         moveDir = new Vector2(moveX, moveY).normalized;
-        
+        if(moveX !=0 || moveY !=0)
+        {
+            animator.SetBool("Speed", true);
+        }
+        else
+        {
+            animator.SetBool("Speed",false);
+        }
     }
     private void Move()
     {

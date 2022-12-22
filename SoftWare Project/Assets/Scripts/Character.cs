@@ -9,10 +9,12 @@ public class Character : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+  
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        
     }
 
    /* void Update()
@@ -41,4 +43,5 @@ public class Character : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
+  
 }
