@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
 {
     public int damage = 5;
     public Character healthBar;
-    
     Transform targetDestination;
     GameObject targetGameobject;
     [SerializeField] float speed;
@@ -18,7 +17,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rgdbd2d = GetComponent<Rigidbody2D>();
-        
+
     }
 
     public void SetTarget(GameObject target)
@@ -35,22 +34,20 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject == targetGameobject )
+        if (collision.gameObject == targetGameobject)
         {
             Attack();
         }
     }
     private void Attack()
     {
-       // Debug.Log("Attacking the Player!!");
+        // Debug.Log("Attacking the Player!!");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if( collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             healthBar.TakeDamge(damage);
         }
-        
     }
-   
 }

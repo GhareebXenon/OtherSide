@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int health, maxhealth = 5;
     public HealthBar healthBar;
+    public int damage = 5;
     void Start()
     {
         health =  maxhealth;
@@ -28,5 +29,15 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            //Kill Enemy Here
+            Destroy(collision.gameObject);
+            //Destroy(this.gameObject);
+            TakeDamage(damage);
+        }
+
+    }
 }
