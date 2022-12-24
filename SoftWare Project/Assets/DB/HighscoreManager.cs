@@ -22,16 +22,11 @@ public class HighscoreManager : MonoBehaviour
         connectionString = "URI=file:" + Application.dataPath + "/DB/Highscore.db";
         CreateTable();
         // ClearScores();
-        // ShowScores();
+        ShowScores();
         // GetScores();
     }
 
-    // Update is called once per frame
-    void LateUpdate()
-    {
-        if (SceneManager.GetSceneByName("Scoreboard").isLoaded)
-            ShowScores();
-    }
+    
 
     private void CreateTable()
     {
@@ -52,7 +47,10 @@ public class HighscoreManager : MonoBehaviour
     public void EnterName()
     {
         nameDialog.SetActive(true);
-
+    }
+    public void CloseNameMenu()
+    {
+        nameDialog.SetActive(false);
     }
     public void ConfirmName()
     {
@@ -61,6 +59,7 @@ public class HighscoreManager : MonoBehaviour
             InsertName(enterName.text);
             playerName = enterName.text;
             enterName.text = string.Empty;
+            InsertScore();
         }
         nameDialog.SetActive(false);
     }
@@ -126,6 +125,7 @@ public class HighscoreManager : MonoBehaviour
                 dbConnection.Close();
             }
         }
+        ShowScores();
     }
 
     private void ShowScores()
@@ -144,7 +144,7 @@ public class HighscoreManager : MonoBehaviour
         }
     }
 
-    public void InsertScore()
+    private void InsertScore()
     {
 
         int minutes = (int)(Time.timeAsDouble / 60f);
@@ -164,7 +164,6 @@ public class HighscoreManager : MonoBehaviour
                 dbCommand.CommandText = sqlQuery;
                 dbCommand.ExecuteScalar();
                 dbConnection.Close();
-                Debug.Log("Inserted");
             }
         }
     }
