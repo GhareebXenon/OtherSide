@@ -110,6 +110,7 @@ public class HighscoreManager : MonoBehaviour
 
     public void ClearScores()
     {
+        ShowScores();
 
 
         using (IDbConnection dbConnection = new SqliteConnection(connectionString))
@@ -125,7 +126,6 @@ public class HighscoreManager : MonoBehaviour
                 dbConnection.Close();
             }
         }
-        ShowScores();
     }
 
     private void ShowScores()
