@@ -13,6 +13,7 @@ public class Health_Kit : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             character.Heal(health);
+            
         }
         Destroy(this.gameObject);
     }
