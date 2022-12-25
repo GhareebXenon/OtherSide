@@ -17,15 +17,15 @@ MonoBehaviour:
     message: hi
     enemyToSpawn: {fileID: 0}
     count: 0
-  - time: 100
+  - time: 70
     message: hello
     enemyToSpawn: {fileID: 0}
-    count: 5
+    count: 15
   - time: 80
     message: bye
     enemyToSpawn: {fileID: 0}
-    count: 7
+    count: 20
   - time: 90
     message: bye
     enemyToSpawn: {fileID: 0}
-    count: 10
+    count: 25
