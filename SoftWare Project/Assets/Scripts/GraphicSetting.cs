@@ -6,6 +6,7 @@ using TMPro;
 public class GraphicSetting : MonoBehaviour
 {
     [SerializeField] TMP_Dropdown qualityDropDown;
+    [SerializeField] TMP_Dropdown screenOptions;
     Resolution[] resolutions;
     [SerializeField] TMP_Dropdown resolutionDropDown;
     float currentResRefreshRate;
@@ -16,6 +17,7 @@ public class GraphicSetting : MonoBehaviour
         resolutions = Screen.resolutions;
         resolutionDropDown.ClearOptions();
         AddResolutions();
+        screenOptions.value = 1;
     }
 
     public void SetResolution(int resolutionIndex)

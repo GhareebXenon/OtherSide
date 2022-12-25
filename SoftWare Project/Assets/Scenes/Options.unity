@@ -5116,6 +5116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qualityDropDown: {fileID: 1597135828}
+  screenOptions: {fileID: 1277503708}
   resolutionDropDown: {fileID: 815475538}
 --- !u!1 &1969990658
 GameObject:
